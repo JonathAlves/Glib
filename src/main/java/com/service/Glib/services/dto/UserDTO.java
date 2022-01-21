@@ -11,7 +11,7 @@ import java.util.List;
 @Getter
 @Setter
 public class UserDTO implements Serializable {
-    private long id;
+    private long idUser;
     private String nickname;
     private String email;
     private String password;

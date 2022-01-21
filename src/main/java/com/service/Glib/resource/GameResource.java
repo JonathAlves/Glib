@@ -15,8 +15,10 @@ import java.util.List;
 @RequestMapping("/glib/games")
 @RequiredArgsConstructor
 public class GameResource {
+
     @Autowired
-    private GameService gameService;
+    private final GameService gameService;
+
 
     @GetMapping
     public ResponseEntity<List<GameDTO>> getGames(){

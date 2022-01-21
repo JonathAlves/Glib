@@ -12,7 +12,7 @@ import java.util.List;
 @Getter
 @Setter
 public class GameDTO implements Serializable {
-    private long id;
+    private long idGame;
     private String name;
     private String synopsis;
     private Date releaseDate;

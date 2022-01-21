@@ -15,8 +15,9 @@ import java.util.List;
 @RequestMapping("/glib/users")
 @RequiredArgsConstructor
 public class UserResource {
+
     @Autowired
-    private UserService userService;
+    private final UserService userService;
 
     @GetMapping
     public ResponseEntity<List<UserDTO>> getUsers(){
