@@ -26,8 +26,8 @@ public class User implements Serializable {
     private String password;
     @Column(name = "BIRTH", nullable = false)
     private Date birth;
-    @OneToMany(cascade = CascadeType.ALL)
-    private List<Game> favoriteGames = new ArrayList<>();
+    @ElementCollection
+    private List<String> favoriteGames = new ArrayList<>();
 
 
 }

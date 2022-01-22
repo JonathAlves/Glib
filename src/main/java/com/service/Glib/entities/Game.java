@@ -30,7 +30,7 @@ public class Game implements Serializable {
     @Column(name = "GENRE", nullable = false)
     private String genre;
     @Column(name = "EVALUATION")
-    private long evaluation;
+    private double evaluation;
     @Column(name = "PUBLISHER", nullable = false)
     private String publisher;
     @ElementCollection
