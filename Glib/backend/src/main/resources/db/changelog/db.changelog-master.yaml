@@ -1,0 +1,35 @@
+application:
+  appName: glib
+  mail:
+    endereco-remetente: jonalves91@gmail.com
+    nome-remetente: Equipe GLIB
+
+  spring:
+    application:
+      name: glibservice
+
+    datasource:
+      type: com.zaxxer.hikari.HikariDataSource
+      url: jdbc:postgresql://localhost:5432/glib
+      username: glib
+      password: glib
+      hikari:
+        auto-commit: false
+      jackson:
+        date-format: yyyy-MM-dd
+        deserialization:
+          fail-on-unknown-properties: false
+      jpa:
+        database: POSTGRESQL
+        show-sql: true
+        open-in-view: false
+        properties:
+          hibernate.id.new_generator_mappings: true
+          hibernate.connection.provider_disables_autocommit: true
+          hibernate.cache.use_second_level_cache: false
+          hibernate.cache.use_query_cache: false
+          hinernate.generate_statistics: false
+      liquibase:
+        change-log: classpath:/db/changelog/master.xml
+      server:
+        port: 8080

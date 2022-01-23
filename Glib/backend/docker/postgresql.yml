@@ -1,0 +1,9 @@
+version: '2'
+services:
+  glib-postgresql:
+    image: postgres:14.1
+    environment:
+      - POSTGRES_USER=glib
+      - POSTGRES_PASSWORD=glib
+    ports:
+      - 5432:5432

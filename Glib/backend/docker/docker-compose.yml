@@ -1,0 +1,7 @@
+version: '2'
+services:
+  glib-postgresql:
+    extends:
+      file: postgresql.yml
+      service: glib-postgresql
+    container_name: glib-postgresql
