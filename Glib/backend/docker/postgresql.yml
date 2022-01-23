@@ -3,7 +3,7 @@ services:
   glib-postgresql:
     image: postgres:14.1
     environment:
-      - POSTGRES_USER=glib
-      - POSTGRES_PASSWORD=glib
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=Jonelipe91
     ports:
       - 5432:5432

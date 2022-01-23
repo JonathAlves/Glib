@@ -17,23 +17,23 @@ import java.util.List;
 public class Game implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID", unique = true, nullable = false)
+    @Column(name = "id", unique = true, nullable = false)
     private long id;
-    @Column(name = "NAME", unique = true, nullable = false)
+    @Column(name = "name", unique = true, nullable = false)
     private String name;
-    @Column(name = "SYNOPSIS")
+    @Column(name = "synopsis")
     private String synopsis;
-    @Column(name = "RELEASE", nullable = false)
+    @Column(name = "release", nullable = false)
     private Date releaseDate;
-    @Column(name = "DEVELOPER", nullable = false)
+    @Column(name = "developer", nullable = false)
     private String developer;
-    @Column(name = "GENRE", nullable = false)
+    @Column(name = "genre", nullable = false)
     private String genre;
-    @Column(name = "EVALUATION")
+    @Column(name = "evaluation")
     private double evaluation;
-    @Column(name = "PUBLISHER", nullable = false)
+    @Column(name = "publisher", nullable = false)
     private String publisher;
     @ElementCollection
-    private List<Platform> platforms = new ArrayList<>();
+    private List<String> platforms = new ArrayList<>();
 
 }

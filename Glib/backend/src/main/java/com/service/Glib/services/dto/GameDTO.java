@@ -1,6 +1,5 @@
 package com.service.Glib.services.dto;
 
-import com.service.Glib.entities.Platform;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -20,5 +19,5 @@ public class GameDTO implements Serializable {
     private String genre;
     private double evaluation;
     private String publisher;
-    private List<Platform> platforms = new ArrayList<>();
+    private List<String> platforms = new ArrayList<>();
 }

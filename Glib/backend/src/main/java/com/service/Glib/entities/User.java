@@ -16,15 +16,15 @@ import java.util.List;
 public class User implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID", unique = true, nullable = false)
+    @Column(name = "id", unique = true, nullable = false)
     private long id;
-    @Column(name = "NICKNAME", unique = true, nullable = false)
+    @Column(name = "nickname", unique = true, nullable = false)
     private String nickname;
     @Column(name = "email", unique = true, nullable = false)
     private String email;
-    @Column(name = "PASSWORD", nullable = false)
+    @Column(name = "password", nullable = false)
     private String password;
-    @Column(name = "BIRTH", nullable = false)
+    @Column(name = "birth", nullable = false)
     private Date birth;
     @ElementCollection
     private List<String> favoriteGames = new ArrayList<>();
