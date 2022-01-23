@@ -1,5 +1,6 @@
 package com.service.Glib.services.dto;
 
+import com.service.Glib.entities.Platform;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,5 +17,5 @@ public class UserDTO implements Serializable {
     private String email;
     private String password;
     private Date birth;
-    private List<String> favoriteGames = new ArrayList<>();
+    private List<PlatformDTO> favoriteGames = new ArrayList<>();
 }
