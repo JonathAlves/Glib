@@ -27,7 +27,7 @@ public class User implements Serializable {
     @Column(name = "birth", nullable = false)
     private Date birth;
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    private List<Platform> favoriteGames = new ArrayList<>();
+    private List<Game> favoriteGames = new ArrayList<>();
 
 
 }

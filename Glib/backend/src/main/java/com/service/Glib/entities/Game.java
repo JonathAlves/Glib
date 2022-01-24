@@ -9,6 +9,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 
 @Entity
@@ -24,7 +25,7 @@ public class Game implements Serializable {
     @Column(name = "synopsis")
     private String synopsis;
     @Column(name = "release", nullable = false)
-    private Date releaseDate;
+    private Date release;
     @Column(name = "developer", nullable = false)
     private String developer;
     @Column(name = "genre", nullable = false)
@@ -33,7 +34,7 @@ public class Game implements Serializable {
     private double evaluation;
     @Column(name = "publisher", nullable = false)
     private String publisher;
-    @ElementCollection
-    private List<String> platforms = new ArrayList<>();
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<Platform> platforms = new ArrayList<>();
 
 }

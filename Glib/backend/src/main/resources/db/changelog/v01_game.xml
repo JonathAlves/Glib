@@ -16,7 +16,7 @@
             <column name="synopsis" type="varchar(255)">
                 <constraints nullable="true"/>
             </column>
-            <column name="releaseDate" type="varchar(255)">
+            <column name="release" type="varchar(255)">
                 <constraints nullable="false"/>
             </column>
             <column name="developer" type="varchar(255)">
@@ -37,6 +37,7 @@
         </createTable>
         <addPrimaryKey tableName="game" columnNames="id" constraintName="pk_game"/>
     </changeSet>
+
     <changeSet id="2" author="jonathan">
         <createTable tableName="user">
             <column name="id" type="number">
@@ -59,6 +60,7 @@
             </column>
         </createTable>
         <addPrimaryKey tableName="user" columnNames="id" constraintName="pk_user"/>
+
     </changeSet>
     <changeSet id="3" author="jonathan">
         <createTable tableName="platform">

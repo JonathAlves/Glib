@@ -8,6 +8,6 @@ import java.io.Serializable;
 @Getter
 @Setter
 public class PlatformDTO implements Serializable {
-    private long idPlatform;
+    private long id;
     private String name;
 }

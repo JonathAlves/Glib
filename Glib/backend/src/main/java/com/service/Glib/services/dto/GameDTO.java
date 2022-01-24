@@ -14,10 +14,10 @@ public class GameDTO implements Serializable {
     private long idGame;
     private String name;
     private String synopsis;
-    private Date releaseDate;
+    private Date release;
     private String developer;
     private String genre;
     private double evaluation;
     private String publisher;
-    private List<String> platforms = new ArrayList<>();
+    private List<PlatformDTO> platforms = new ArrayList<>();
 }
