@@ -31,11 +31,13 @@
             <column name="publisher" type="varchar(255)">
                 <constraints nullable="false"/>
             </column>
-            <column name="platforms" type="varchar(255) []">
+            <column name="platforms" type="varchar(255)">
                 <constraints nullable="false"/>
             </column>
+
         </createTable>
         <addPrimaryKey tableName="game" columnNames="id" constraintName="pk_game"/>
+        <createSequence sequenceName="sq_game" incrementBy="1" startValue="1"/>
     </changeSet>
 
     <changeSet id="2" author="jonathan">
@@ -55,21 +57,13 @@
             <column name="birth" type="date">
                 <constraints nullable="false"/>
             </column>
-            <column name="favoriteGames" type="varchar(255) []">
+            <column name="favoriteGames" type="varchar(255)">
                 <constraints nullable="false"/>
             </column>
+
         </createTable>
         <addPrimaryKey tableName="user" columnNames="id" constraintName="pk_user"/>
+        <createSequence sequenceName="sq_user" incrementBy="1" startValue="1"/>
 
-    </changeSet>
-    <changeSet id="3" author="jonathan">
-        <createTable tableName="platform">
-            <column name="id" type="number">
-                <constraints nullable="false"/>
-            </column>
-            <column name="name" type="varchar(255)">
-                <constraints nullable="false"/>
-            </column>
-        </createTable>
     </changeSet>
 </databaseChangeLog>

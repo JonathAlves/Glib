@@ -15,7 +15,7 @@ import java.util.List;
 @Transactional
 @Service
 @RequiredArgsConstructor
-public class UserService {
+public class UserService{
 
     @Autowired
     private IUserRepository userRepository;

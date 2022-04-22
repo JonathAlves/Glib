@@ -19,5 +19,5 @@ public class GameDTO implements Serializable {
     private String genre;
     private double evaluation;
     private String publisher;
-    private List<PlatformDTO> platforms = new ArrayList<>();
+    private String platforms;
 }

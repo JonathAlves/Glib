@@ -16,5 +16,5 @@ public class UserDTO implements Serializable {
     private String email;
     private String password;
     private Date birth;
-    private List<GameDTO> favoriteGames = new ArrayList<>();
+    private String favoriteGames;
 }

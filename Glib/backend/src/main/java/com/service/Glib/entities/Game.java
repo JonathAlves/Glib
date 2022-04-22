@@ -17,7 +17,8 @@ import java.util.Set;
 @Setter
 public class Game implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sq_game")
+    @SequenceGenerator(name = "sq_game", allocationSize = 1, sequenceName = "sq_game")
     @Column(name = "id", unique = true, nullable = false)
     private long id;
     @Column(name = "name", unique = true, nullable = false)
@@ -34,7 +35,7 @@ public class Game implements Serializable {
     private double evaluation;
     @Column(name = "publisher", nullable = false)
     private String publisher;
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    private List<Platform> platforms = new ArrayList<>();
+    @Column(name = "platforms", nullable = false)
+    private String platforms;
 
 }
