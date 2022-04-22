@@ -1,0 +1,91 @@
+.inicio {
+    width: 100vw;
+    height: 100vh;
+    background-color: #111111;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    width: 400px;
+    height: 500px;
+    background: rgb(78, 231, 193);
+    border-radius: 10px;
+    box-shadow: 100px;
+}
+
+h1#titulo{
+    font-size: 50px;
+    font-family: Helvetica;
+    padding-top: 30px;
+    padding-left: 140px;
+}
+
+h4#subtitulo{
+    padding-left: 100px;
+}   
+
+.button {
+    background-color: black;
+    border-radius: 5px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 30px;
+    margin-left: 45px;
+    border: none;
+}
+
+.button:hover{
+    background-color: beige;
+    color: black;
+}
+
+.mb-3{
+    width: 30px;
+    height: 30px;
+    margin: 15px 10px ;
+    border-radius: 5px;
+}
+
+.text-muted{
+    font-size: 9px;
+}
+
+.forms{
+    margin-top: 60px;
+    margin-left: 85px;
+}
+
+input#email{
+    border-radius: 15px;
+    margin: 5px;
+    padding: 10px;
+    border: none;
+}
+
+input#senha{
+    border-radius: 15px;
+    margin: 5px;
+    padding: 10px;
+    border: none;
+}
+
+input#email:hover{
+    background-color: rgb(54, 71, 71);
+    color: white;
+}
+
+input#senha:hover{
+    background-color: rgb(54, 71, 71);
+    color: white;
+}
+
+
+
+

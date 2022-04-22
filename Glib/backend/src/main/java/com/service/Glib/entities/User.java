@@ -15,7 +15,8 @@ import java.util.List;
 @Entity
 public class User implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sq_user")
+    @SequenceGenerator(name = "sq_user", allocationSize = 1, sequenceName = "sq_user")
     @Column(name = "id", unique = true, nullable = false)
     private long id;
     @Column(name = "nickname", unique = true, nullable = false)
@@ -26,8 +27,8 @@ public class User implements Serializable {
     private String password;
     @Column(name = "birth", nullable = false)
     private Date birth;
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    private List<Game> favoriteGames = new ArrayList<>();
+    @Column(name = "favoriteGames", nullable = false)
+    private String favoriteGames;
 
 
 }
